@@ -105,8 +105,8 @@ ALTER TABLE Insta_Creator RENAME TO Creator;
 ALTER TABLE creator CHANGE COLUMN name user_name VARCHAR(25) UNIQUE;
 ALTER TABLE creator MODIFY age INT CHECK (age>=18);  -- Minimum age changes to 18
 
--- TRUNCATE -> to delete table's data
--- DROP -> to delete entire table (data+structure)
+-- TRUNCATE -> used to delete table's data
+-- DROP -> used to delete entire table (data+structure)
 CREATE TABLE likes (user_id INT NOT NULL, post_id INT NOT NULL, liked_at TIMESTAMP, reaction VARCHAR(20));
 INSERT INTO likes(user_id,post_id,liked_at,reaction) VALUES (1,101,'2026-02-20 10:00:00','sad'),(2,102,'2026-03-12','fire'),(3,103,'2024-04-15 08:35:50','laugh');
 TRUNCATE TABLE likes;
